@@ -15,6 +15,7 @@ async function loadPRs(directory) {
             subject: pieces[2]
         }
     });
+  const gitLogCmd = `cd ${directory} && git log --pretty=format:"%an|%ad|%s" --relative-date`;
 }
 
 async function getActiveUsers(){
